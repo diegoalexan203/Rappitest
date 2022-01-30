@@ -1,0 +1,6 @@
+framework module Pods_rappitestDiego8aTests {
+  umbrella header "Pods-rappitestDiego8aTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
