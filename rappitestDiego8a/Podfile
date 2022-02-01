@@ -5,6 +5,9 @@ target 'rappitestDiego8a' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'SwiftLint'
+  pod 'RxSwift', '~> 5.1'
+  pod 'Moya/RxSwift', '~> 14.0'
+  pod 'RxCocoa', '~> 5'
 
   # Pods for rappitestDiego8a
 

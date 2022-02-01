@@ -16,6 +16,17 @@
 		9336AE2B27A5B5F500319AA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9336AE2A27A5B5F500319AA0 /* Assets.xcassets */; };
 		9336AE2E27A5B5F500319AA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9336AE2C27A5B5F500319AA0 /* LaunchScreen.storyboard */; };
 		9336AE3927A5B5F600319AA0 /* rappitestDiego8aTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9336AE3827A5B5F600319AA0 /* rappitestDiego8aTests.swift */; };
+		9336AE6427A7585900319AA0 /* OptionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9336AE6327A7585900319AA0 /* OptionViewCell.xib */; };
+		93B689BC27A81B9600BC460D /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B689BB27A81B9600BC460D /* DashBoardViewController.swift */; };
+		93B689C527A81C9000BC460D /* MoviesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B689C427A81C9000BC460D /* MoviesProtocol.swift */; };
+		93B689C727A8200800BC460D /* ResponseTDMEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B689C627A8200800BC460D /* ResponseTDMEntity.swift */; };
+		93B689C927A820B900BC460D /* MoviesBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B689C827A820B900BC460D /* MoviesBusinessLogic.swift */; };
+		93B689CC27A821C900BC460D /* MoviesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B689CB27A821C900BC460D /* MoviesRepositoryProtocol.swift */; };
+		93B689CE27A8226D00BC460D /* MoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B689CD27A8226D00BC460D /* MoviesRepository.swift */; };
+		93B689D027A8235100BC460D /* DefaultAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B689CF27A8235100BC460D /* DefaultAlamofireManager.swift */; };
+		93B689D327A823D400BC460D /* MoviesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B689D227A823D400BC460D /* MoviesApi.swift */; };
+		93E4239427A8A2160021992D /* DashBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E4239327A8A2160021992D /* DashBoardViewModel.swift */; };
+		93E4239727A8A24F0021992D /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E4239627A8A24F0021992D /* ViewModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +52,17 @@
 		9336AE2F27A5B5F500319AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9336AE3427A5B5F600319AA0 /* rappitestDiego8aTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rappitestDiego8aTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9336AE3827A5B5F600319AA0 /* rappitestDiego8aTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rappitestDiego8aTests.swift; sourceTree = "<group>"; };
+		9336AE6327A7585900319AA0 /* OptionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionViewCell.xib; sourceTree = "<group>"; };
+		93B689BB27A81B9600BC460D /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
+		93B689C427A81C9000BC460D /* MoviesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesProtocol.swift; sourceTree = "<group>"; };
+		93B689C627A8200800BC460D /* ResponseTDMEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseTDMEntity.swift; sourceTree = "<group>"; };
+		93B689C827A820B900BC460D /* MoviesBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesBusinessLogic.swift; sourceTree = "<group>"; };
+		93B689CB27A821C900BC460D /* MoviesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepositoryProtocol.swift; sourceTree = "<group>"; };
+		93B689CD27A8226D00BC460D /* MoviesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepository.swift; sourceTree = "<group>"; };
+		93B689CF27A8235100BC460D /* DefaultAlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAlamofireManager.swift; sourceTree = "<group>"; };
+		93B689D227A823D400BC460D /* MoviesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesApi.swift; sourceTree = "<group>"; };
+		93E4239327A8A2160021992D /* DashBoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewModel.swift; sourceTree = "<group>"; };
+		93E4239627A8A24F0021992D /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		AAF5294CDF43B89FB6AD7CD2 /* Pods-rappitestDiego8a.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rappitestDiego8a.debug.xcconfig"; path = "Target Support Files/Pods-rappitestDiego8a/Pods-rappitestDiego8a.debug.xcconfig"; sourceTree = "<group>"; };
 		D8B406A2587166DF90437B4A /* Pods_rappitestDiego8aTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rappitestDiego8aTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AC8CE38A6A76E86633C6B5 /* Pods-rappitestDiego8aTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rappitestDiego8aTests.release.xcconfig"; path = "Target Support Files/Pods-rappitestDiego8aTests/Pods-rappitestDiego8aTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,12 +121,14 @@
 		9336AE2027A5B5F300319AA0 /* rappitestDiego8a */ = {
 			isa = PBXGroup;
 			children = (
+				9336AE5827A72DF700319AA0 /* ViewModel */,
+				9336AE5727A72D8C00319AA0 /* Model */,
+				9336AE5A27A72E7700319AA0 /* View */,
+				9336AE5D27A72E9600319AA0 /* Support */,
+				9336AE5C27A72E8B00319AA0 /* Resources */,
+				9336AE5B27A72E8400319AA0 /* Helpers */,
 				9336AE2127A5B5F300319AA0 /* AppDelegate.swift */,
 				9336AE2327A5B5F300319AA0 /* SceneDelegate.swift */,
-				9336AE2527A5B5F300319AA0 /* ViewController.swift */,
-				9336AE2727A5B5F300319AA0 /* Main.storyboard */,
-				9336AE2A27A5B5F500319AA0 /* Assets.xcassets */,
-				9336AE2C27A5B5F500319AA0 /* LaunchScreen.storyboard */,
 				9336AE2F27A5B5F500319AA0 /* Info.plist */,
 			);
 			path = rappitestDiego8a;
@@ -116,6 +140,143 @@
 				9336AE3827A5B5F600319AA0 /* rappitestDiego8aTests.swift */,
 			);
 			path = rappitestDiego8aTests;
+			sourceTree = "<group>";
+		};
+		9336AE5727A72D8C00319AA0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9336AE6127A750B500319AA0 /* Requests */,
+				9336AE6027A750A600319AA0 /* Responses */,
+				9336AE5F27A7508D00319AA0 /* Repositories */,
+				9336AE5E27A7504900319AA0 /* BusinessLogic */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9336AE5827A72DF700319AA0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				93E4239527A8A23B0021992D /* Protocols */,
+				93E4239327A8A2160021992D /* DashBoardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9336AE5927A72E4D00319AA0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9336AE2727A5B5F300319AA0 /* Main.storyboard */,
+				9336AE2527A5B5F300319AA0 /* ViewController.swift */,
+				93B689BB27A81B9600BC460D /* DashBoardViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9336AE5A27A72E7700319AA0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9336AE6227A7560D00319AA0 /* ViewCell */,
+				9336AE5927A72E4D00319AA0 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9336AE5B27A72E8400319AA0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9336AE5C27A72E8B00319AA0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9336AE2A27A5B5F500319AA0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9336AE5D27A72E9600319AA0 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				9336AE2C27A5B5F500319AA0 /* LaunchScreen.storyboard */,
+				93B689CF27A8235100BC460D /* DefaultAlamofireManager.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		9336AE5E27A7504900319AA0 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				93B689C227A81C6900BC460D /* Protocols */,
+				93B689C827A820B900BC460D /* MoviesBusinessLogic.swift */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		9336AE5F27A7508D00319AA0 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				93B689D127A823B900BC460D /* Api */,
+				93B689CA27A821B800BC460D /* Protocols */,
+				93B689CD27A8226D00BC460D /* MoviesRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		9336AE6027A750A600319AA0 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				93B689C627A8200800BC460D /* ResponseTDMEntity.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		9336AE6127A750B500319AA0 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		9336AE6227A7560D00319AA0 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9336AE6327A7585900319AA0 /* OptionViewCell.xib */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
+		93B689C227A81C6900BC460D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				93B689C427A81C9000BC460D /* MoviesProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		93B689CA27A821B800BC460D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				93B689CB27A821C900BC460D /* MoviesRepositoryProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		93B689D127A823B900BC460D /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				93B689D227A823D400BC460D /* MoviesApi.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		93E4239527A8A23B0021992D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				93E4239627A8A24F0021992D /* ViewModelProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		9D56FEDF461E696828218630 /* Pods */ = {
@@ -136,11 +297,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9336AE4827A5B5F600319AA0 /* Build configuration list for PBXNativeTarget "rappitestDiego8a" */;
 			buildPhases = (
-				9336AE5127A5B64900319AA0 /* Run SwiftLint */,
 				0B9AE369189183375BBE5FF6 /* [CP] Check Pods Manifest.lock */,
+				9336AE5127A5B64900319AA0 /* Run SwiftLint */,
 				9336AE1A27A5B5F300319AA0 /* Sources */,
 				9336AE1B27A5B5F300319AA0 /* Frameworks */,
 				9336AE1C27A5B5F300319AA0 /* Resources */,
+				E60361C5A709937A32587464 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +378,7 @@
 				9336AE2E27A5B5F500319AA0 /* LaunchScreen.storyboard in Resources */,
 				9336AE2B27A5B5F500319AA0 /* Assets.xcassets in Resources */,
 				9336AE2927A5B5F300319AA0 /* Main.storyboard in Resources */,
+				9336AE6427A7585900319AA0 /* OptionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +452,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		E60361C5A709937A32587464 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rappitestDiego8a/Pods-rappitestDiego8a-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rappitestDiego8a/Pods-rappitestDiego8a-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rappitestDiego8a/Pods-rappitestDiego8a-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -299,8 +479,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9336AE2627A5B5F300319AA0 /* ViewController.swift in Sources */,
+				93B689C527A81C9000BC460D /* MoviesProtocol.swift in Sources */,
+				93B689C927A820B900BC460D /* MoviesBusinessLogic.swift in Sources */,
 				9336AE2227A5B5F300319AA0 /* AppDelegate.swift in Sources */,
+				93E4239727A8A24F0021992D /* ViewModelProtocol.swift in Sources */,
+				93B689CE27A8226D00BC460D /* MoviesRepository.swift in Sources */,
 				9336AE2427A5B5F300319AA0 /* SceneDelegate.swift in Sources */,
+				93B689BC27A81B9600BC460D /* DashBoardViewController.swift in Sources */,
+				93E4239427A8A2160021992D /* DashBoardViewModel.swift in Sources */,
+				93B689D327A823D400BC460D /* MoviesApi.swift in Sources */,
+				93B689CC27A821C900BC460D /* MoviesRepositoryProtocol.swift in Sources */,
+				93B689D027A8235100BC460D /* DefaultAlamofireManager.swift in Sources */,
+				93B689C727A8200800BC460D /* ResponseTDMEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
