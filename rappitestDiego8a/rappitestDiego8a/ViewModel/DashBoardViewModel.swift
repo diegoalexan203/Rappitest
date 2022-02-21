@@ -15,18 +15,16 @@ class DashBoardViewModel: ViewModelProtocol {
     
     let disposeBag = DisposeBag()
     var moviesBusinessLogic: MoviesBusinessLogic
-    
+    var moviesList = [MoviesEntity]()
+
     struct Input {
          var page = BehaviorRelay<String?>(value: nil)
     }
 
     struct Output {
-//        var categories = BehaviorRelay<[Category]?>(value: nil)
+        var movies = BehaviorRelay<[MoviesEntity]?>(value: nil)
         var isLoading = BehaviorRelay<Bool>(value: false)
-//        var isSuccesful = BehaviorRelay<Bool>(value: false)
-//        var message = BehaviorRelay<(String?, String?)>(value: (nil, nil))
-//        var codeResponse = BehaviorRelay<Int?>(value: nil)
-//        var idService = BehaviorRelay<String?>(value: nil)
+
     }
     
     let input: Input
@@ -50,8 +48,20 @@ class DashBoardViewModel: ViewModelProtocol {
         self.input.page.subscribe(
         onNext: { page in
         if page != nil {
-            //self.getMovies(page: self.input.page.value ?? "" )
-            self.getMovies()
+            // self.getMovies(page: self.input.page.value ?? "" )
+            do {
+                try self.moviesBusinessLogic.getMovies(page: page!).asObservable().retry(1)
+                    .subscribe(onNext: { response in
+                        let users = response
+                        self.output.movies.accept(response.results)
+//                        for user in users {
+//                            self.usersDB.create(user: user)
+//                        }
+//                        self.showUsers()
+                    })
+            } catch {
+                print("Error", "No se pudo cargar el servicio")
+            }
         }}).disposed(by: disposeBag)
     }
 }

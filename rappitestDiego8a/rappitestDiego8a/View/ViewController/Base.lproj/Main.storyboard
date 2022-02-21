@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WLn-hp-EHG">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -9,19 +9,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="S76-Hb-jyy">
+            <objects>
+                <navigationController id="WLn-hp-EHG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zzA-cg-7aJ">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SDV-ym-Qxc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1eL-oA-Uje" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1596" y="99"/>
+        </scene>
         <!--Dash Board View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="DashBoardViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="DashBoardViewController" customModule="rappitestDiego8a" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdz-QO-OdO">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="110.33333333333333"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="108.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9V-vT-bp8">
-                                        <rect key="frame" x="25.000000000000007" y="31.000000000000004" width="90.666666666666686" height="48.333333333333343"/>
+                                        <rect key="frame" x="25.000000000000007" y="30.000000000000004" width="90.666666666666686" height="48.333333333333343"/>
                                         <fontDescription key="fontDescription" name="MuktaMahee-Bold" family="Mukta Mahee" pointSize="29"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
@@ -35,20 +51,20 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Uwz-qw-AgM">
-                                <rect key="frame" x="0.0" y="115.33333333333331" width="414" height="589"/>
+                                <rect key="frame" x="0.0" y="201.33333333333331" width="390" height="577.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Eme-EC-vmx">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" sectionInsetReference="safeArea" id="Lgo-Z3-H0z">
+                                    <size key="itemSize" width="120" height="160"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="2" minY="10" maxX="2" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Pqb-QY-A0u">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Zbc-N9-PPQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0fr-fv-GEI">
+                                        <rect key="frame" x="2" y="10" width="120" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hb8-PF-xsr">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
@@ -68,10 +84,54 @@
                             <constraint firstItem="gdz-QO-OdO" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.15" id="wlQ-JM-Uhc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dsy-74-0dH"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Uwz-qw-AgM" id="eTV-Mj-ORb"/>
+                        <segue destination="B62-le-Fq3" kind="show" identifier="navigationSegue" id="Rxg-f2-5am"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="122" y="87"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="aZW-qV-x07">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" id="B62-le-Fq3" customClass="DetailsViewController" customModule="rappitestDiego8a" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oCQ-HO-Wqa">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IfO-PD-ayg">
+                                <rect key="frame" x="63.333333333333343" y="208.33333333333334" width="263.33333333333326" height="433.33333333333326"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVm-RO-HOu">
+                                <rect key="frame" x="161.33333333333334" y="130" width="67.333333333333343" height="48.333333333333343"/>
+                                <fontDescription key="fontDescription" name="MuktaMahee-Bold" family="Mukta Mahee" pointSize="29"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="teL-CI-XMW"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IfO-PD-ayg" firstAttribute="height" secondItem="oCQ-HO-Wqa" secondAttribute="height" multiplier="0.513428" id="Ss5-h6-uDb"/>
+                            <constraint firstItem="IfO-PD-ayg" firstAttribute="top" secondItem="hVm-RO-HOu" secondAttribute="bottom" constant="30" id="cii-8g-UGs"/>
+                            <constraint firstItem="IfO-PD-ayg" firstAttribute="centerX" secondItem="teL-CI-XMW" secondAttribute="centerX" id="gPb-Lh-2wr"/>
+                            <constraint firstItem="hVm-RO-HOu" firstAttribute="top" secondItem="teL-CI-XMW" secondAttribute="top" constant="42" id="iuS-c9-k2Z"/>
+                            <constraint firstItem="hVm-RO-HOu" firstAttribute="centerX" secondItem="teL-CI-XMW" secondAttribute="centerX" id="u1t-Hc-yH2"/>
+                            <constraint firstItem="IfO-PD-ayg" firstAttribute="width" secondItem="oCQ-HO-Wqa" secondAttribute="width" multiplier="0.675214" id="um3-eb-96U"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ouC-ci-RDL"/>
+                    <connections>
+                        <outlet property="moviesUiImage" destination="IfO-PD-ayg" id="KEV-gJ-AEw"/>
+                        <outlet property="nameLabel" destination="hVm-RO-HOu" id="Gww-wA-ezP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pMk-2Y-jNL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1164" y="77"/>
         </scene>
     </scenes>
     <resources>

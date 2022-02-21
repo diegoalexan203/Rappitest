@@ -27,6 +27,11 @@
 		93B689D327A823D400BC460D /* MoviesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B689D227A823D400BC460D /* MoviesApi.swift */; };
 		93E4239427A8A2160021992D /* DashBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E4239327A8A2160021992D /* DashBoardViewModel.swift */; };
 		93E4239727A8A24F0021992D /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E4239627A8A24F0021992D /* ViewModelProtocol.swift */; };
+		F12BCC2827C2B29D0057652A /* DbHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12BCC2727C2B29D0057652A /* DbHelper.swift */; };
+		F1B86DA427ADA6AA00E43E95 /* DashBoardViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B86DA327ADA6AA00E43E95 /* DashBoardViewController+Delegate.swift */; };
+		F1D61A3B27AB09D200943859 /* MoviesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D61A3A27AB09D200943859 /* MoviesEntity.swift */; };
+		F1D61A4227AB561000943859 /* OptionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D61A4127AB561000943859 /* OptionViewCell.swift */; };
+		F1FED4D427BC7A7800DE57B9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FED4D327BC7A7800DE57B9 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +70,11 @@
 		93E4239627A8A24F0021992D /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		AAF5294CDF43B89FB6AD7CD2 /* Pods-rappitestDiego8a.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rappitestDiego8a.debug.xcconfig"; path = "Target Support Files/Pods-rappitestDiego8a/Pods-rappitestDiego8a.debug.xcconfig"; sourceTree = "<group>"; };
 		D8B406A2587166DF90437B4A /* Pods_rappitestDiego8aTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rappitestDiego8aTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12BCC2727C2B29D0057652A /* DbHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DbHelper.swift; path = rappitestDiego8a/View/ViewController/DbHelper.swift; sourceTree = SOURCE_ROOT; };
+		F1B86DA327ADA6AA00E43E95 /* DashBoardViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashBoardViewController+Delegate.swift"; sourceTree = "<group>"; };
+		F1D61A3A27AB09D200943859 /* MoviesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesEntity.swift; sourceTree = "<group>"; };
+		F1D61A4127AB561000943859 /* OptionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewCell.swift; sourceTree = "<group>"; };
+		F1FED4D327BC7A7800DE57B9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		F4AC8CE38A6A76E86633C6B5 /* Pods-rappitestDiego8aTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rappitestDiego8aTests.release.xcconfig"; path = "Target Support Files/Pods-rappitestDiego8aTests/Pods-rappitestDiego8aTests.release.xcconfig"; sourceTree = "<group>"; };
 		FC20FAFC1BD051320723C1E1 /* Pods-rappitestDiego8aTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rappitestDiego8aTests.debug.xcconfig"; path = "Target Support Files/Pods-rappitestDiego8aTests/Pods-rappitestDiego8aTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +178,8 @@
 				9336AE2727A5B5F300319AA0 /* Main.storyboard */,
 				9336AE2527A5B5F300319AA0 /* ViewController.swift */,
 				93B689BB27A81B9600BC460D /* DashBoardViewController.swift */,
+				F1B86DA327ADA6AA00E43E95 /* DashBoardViewController+Delegate.swift */,
+				F1FED4D327BC7A7800DE57B9 /* DetailsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -184,6 +196,7 @@
 		9336AE5B27A72E8400319AA0 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F12BCC2727C2B29D0057652A /* DbHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -228,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				93B689C627A8200800BC460D /* ResponseTDMEntity.swift */,
+				F1D61A3A27AB09D200943859 /* MoviesEntity.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -243,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				9336AE6327A7585900319AA0 /* OptionViewCell.xib */,
+				F1D61A4127AB561000943859 /* OptionViewCell.swift */,
 			);
 			path = ViewCell;
 			sourceTree = "<group>";
@@ -487,10 +502,15 @@
 				9336AE2427A5B5F300319AA0 /* SceneDelegate.swift in Sources */,
 				93B689BC27A81B9600BC460D /* DashBoardViewController.swift in Sources */,
 				93E4239427A8A2160021992D /* DashBoardViewModel.swift in Sources */,
+				F1FED4D427BC7A7800DE57B9 /* DetailsViewController.swift in Sources */,
 				93B689D327A823D400BC460D /* MoviesApi.swift in Sources */,
 				93B689CC27A821C900BC460D /* MoviesRepositoryProtocol.swift in Sources */,
 				93B689D027A8235100BC460D /* DefaultAlamofireManager.swift in Sources */,
+				F12BCC2827C2B29D0057652A /* DbHelper.swift in Sources */,
 				93B689C727A8200800BC460D /* ResponseTDMEntity.swift in Sources */,
+				F1D61A3B27AB09D200943859 /* MoviesEntity.swift in Sources */,
+				F1B86DA427ADA6AA00E43E95 /* DashBoardViewController+Delegate.swift in Sources */,
+				F1D61A4227AB561000943859 /* OptionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,7 +693,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -702,7 +722,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 public enum MoviesApi {
-    case getMovies ( page: String)
+    case getMovies ( page: String, key: String)
 }
 
 extension MoviesApi: TargetType {
@@ -30,18 +30,27 @@ extension MoviesApi: TargetType {
     
     public var task: Task {
         switch self {
-        case .getMovies(let page):
-            return .requestParameters(parameters: [ "page": page], encoding: URLEncoding.queryString)
+        case .getMovies(let page, let key):
+
+            return .requestParameters(parameters: [ "page": page, "api_key": key], encoding: URLEncoding.queryString)
         }
     }
     
+//    public var headers: [String: String]? {
+//        switch self {
+//        case .getMovies(_, let key):
+////            var headers: [String: String] {
+////                   return ["Authorization": "Bearer \(key)"]
+////            }
+//            var headers : [String : String] = [:]
+//            headers["key"] = key
+//            return headers
+//        }
+//    }
+    
     public var headers: [String: String]? {
-        switch self {
-        case .getMovies:
-            let headers: [String: String] = [:]
-            return headers
-        }
-    }
+       return ["Content-Type": "application/json"]
+     }
 
     public var baseURL: URL {
         return URL(string: "https://api.themoviedb.org/4")!
@@ -51,7 +60,7 @@ extension MoviesApi: TargetType {
     switch self {
 
     case .getMovies:
-        return "/list/"
+        return "/list/4"
         
     }
     }

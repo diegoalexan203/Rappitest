@@ -15,7 +15,7 @@ class MoviesRepository: MoviesRepositoryProtocol {
     let officesApi = MoyaProvider<MoviesApi>(session: DefaultAlamofireManager.sharedManager)
 
     func getMovies(page: String) throws -> Observable<ResponseTDMEntity> {
-        return officesApi.rx.request(MoviesApi.getMovies(page: page)).asObservable().flatMap({ response -> Observable<ResponseTDMEntity> in
+        return officesApi.rx.request(MoviesApi.getMovies(page: page, key: "f96f41213ed563ef00b841f2fa3eed80")).asObservable().flatMap({ response -> Observable<ResponseTDMEntity> in
 
                      if response.statusCode == 200 {
                          do {
