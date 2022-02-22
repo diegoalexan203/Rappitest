@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  rappitestDiego8a
 //
-//  Created by Periferia on 29/01/22.
+//  Created by Diego Ochoa on 29/01/22.
 //
 
 import UIKit

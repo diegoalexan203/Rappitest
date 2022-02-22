@@ -2,7 +2,7 @@
 //  rappitestDiego8aTests.swift
 //  rappitestDiego8aTests
 //
-//  Created by Periferia on 29/01/22.
+//  Created by Diego Ochoa on 29/01/22.
 //
 
 import XCTest

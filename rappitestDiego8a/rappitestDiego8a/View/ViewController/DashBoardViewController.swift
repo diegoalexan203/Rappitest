@@ -2,69 +2,70 @@
 //  DashBoardViewController.swift
 //  rappitestDiego8a
 //
-//  Created by Periferia on 31/01/22.
+//  Created by Diego Ochoa on 31/01/22.
 //
 
 import Foundation
-import UIKit
+import NVActivityIndicatorView
 import RxCocoa
 import RxSwift
+import UIKit
 
 class DashBoardViewController: UIViewController {
-    
     let disposeBag = DisposeBag()
     let dashBoardViewModel = DashBoardViewModel()
-    var arrMovies : [MoviesEntity] = []
+    var arrMovies: [MoviesEntity] = []
+    var page: Int = 1
+    var activityIndicator: NVActivityIndicatorView!
+    var ispaginating: Bool = false
 
-    @IBOutlet weak var collectionView: UICollectionView!
-    
+    @IBOutlet var collectionView: UICollectionView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
-        collectionView.register(OptionViewCell.nib(), forCellWithReuseIdentifier: OptionViewCell.identifier)//(OptionViewCell.self, forCellReuseIdentifier: OptionViewCell.identifier)
+        navigationController?.isNavigationBarHidden = true
+        collectionView.register(OptionViewCell.nib(), forCellWithReuseIdentifier: OptionViewCell.identifier)
+        createProgressIndicator()
         bind()
     }
 
-    func bind() {
-        dashBoardViewModel.input.page.accept("1")
-        dashBoardViewModel.output.movies.subscribe(onNext: {
-            response in
-                 self.arrMovies = response ?? []
-                self.collectionView.reloadData()
-            
-//            self.output.isLoading.accept(true)
-//                       let categoryFake = self.addCategoryfake()
-//            var list = response.Categorias
-//            list?.append(categoryFake)
-            //self.output.categories.accept(list)
-        },
-        onError: { responseError in
-           // let statusCodeMoya = ConverterErrorMoya().converStatusCodeErrorCodeMoya(error: responseError as NSError)
-//            self.output.isLoading.accept(false)
-//            self.output.codeResponse.accept(statusCodeMoya)
+    fileprivate func createProgressIndicator() {
+        let xAxis = (view.frame.size.width / 2)
+        let yAxis = (view.frame.size.height / 2)
+        let frame = CGRect(x: xAxis - 20, y: yAxis, width: 50, height: 50)
+        activityIndicator = NVActivityIndicatorView(frame: frame)
+        activityIndicator.type = .ballClipRotate // add your type
+        activityIndicator.color = UIColor.red // add your color
+        activityIndicator.tintColor = UIColor.darkGray
+        view.addSubview(activityIndicator)
     }
-    ).disposed(by: disposeBag)
-//        formalitiesViewModel.output.categories.subscribe(
-//            onNext: { cate in
-//                if cate != nil {
-//                    if cate!.count > 0 {
-//                        self.showDataCategorysOrEmpty()
-//                    }
-//                }
-//
-//        }).disposed(by: disposeBag)
-//
-//        formalitiesViewModel.output.codeResponse.subscribe(
-//            onNext: { code in
-//                if code != nil {
-//                    self.hideProgressIndicator()
-//                    self.showMessageByErrorCode(codeError: code!, context: "two")
-//                }
-//            }
-//        ).disposed(by: disposeBag)
+
+    func bind() {
+        dashBoardViewModel.input.page.accept(String(page))
+        dashBoardViewModel.output.movies.subscribe(onNext: {
+                                                       response in
+                                                       self.arrMovies = response ?? []
+                                                       self.collectionView.reloadData()
+                                                       self.ispaginating = false
+                                                   },
+                                                   onError: { _ in
+                                                       self.hideactivityIndicator()
+                                                       print("se presento un problema")
+                                                   }
+        ).disposed(by: disposeBag)
+        dashBoardViewModel.output.isLoading.subscribe(onNext: {
+            respose in
+            if respose {
+                self.activityIndicator.startAnimating()
+            } else {
+                self.hideactivityIndicator()
+            }
+        }, onError: { _ in }).disposed(by: disposeBag)
         collectionView.rx.setDelegate(self).disposed(by: disposeBag)
         collectionView.rx.setDataSource(self).disposed(by: disposeBag)
     }
 
+    func hideactivityIndicator() {
+        activityIndicator.stopAnimating()
+    }
 }
-

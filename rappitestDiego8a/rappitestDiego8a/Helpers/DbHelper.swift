@@ -13,12 +13,12 @@ class DbHelper {
     var path: String = "MoviesDB.sqlite3"
     let moviesTable = Table("movies")
 
-    let id = Expression<Int>("id")
-    let backdropPath = Expression<String>("backdropPath")
-    let originalTitle = Expression<String>("originalTitle")
-    let overview = Expression<String>("overview")
-    let posterPath = Expression<String>("posterPath")
-    let releaseDate = Expression<String>("releaseDate")
+    let id = Expression<Int?>("id")
+    let backdropPath = Expression<String?>("backdropPath")
+    let originalTitle = Expression<String?>("originalTitle")
+    let overview = Expression<String?>("overview")
+    let posterPath = Expression<String?>("posterPath")
+    let releaseDate = Expression<String?>("releaseDate")
     let title = Expression<String>("title")
     let video = Expression<Bool?>("video")
 
@@ -70,7 +70,7 @@ class DbHelper {
     }
 
     func create(movies: MoviesEntity) {
-        let userToInsert = moviesTable.insert(id <- movies.id!, backdropPath <- movies.backdropPath!, originalTitle <- movies.originalTitle!, overview <- movies.overview!, releaseDate <- movies.releaseDate!, title <- movies.title!, video <- movies.video)
+        let userToInsert = moviesTable.insert(id <- movies.id!, backdropPath <- movies.backdropPath!, originalTitle <- movies.originalTitle!, overview <- movies.overview!, releaseDate <- movies.releaseDate!, title <- movies.title, video <- movies.video)
 
         do {
             try moviesDB.run(userToInsert)
@@ -105,8 +105,8 @@ class DbHelper {
         var movie: MoviesEntity?
         do {
             for movieGetted in try moviesDB.prepare(movieFromDb) {
-                movie = MoviesEntity( backdropPath: movieFromDb[backdropPath], id: movieFromDb[id], originalTitle: movieFromDb[originalTitle],
-                                     overview: movieFromDb[overview], posterPath: movieFromDb[posterPath], releaseDate: movieFromDb[releaseDate], title: movieFromDb[title], video: movieFromDb[video])
+                movie = MoviesEntity(backdropPath: movieGetted[backdropPath], id: movieGetted[id], originalTitle: movieGetted[originalTitle],
+                                     overview: movieGetted[overview], posterPath: movieGetted[posterPath], releaseDate: movieGetted[releaseDate], title: movieGetted[title], video: movieGetted[video])
 
                 return movie
             }

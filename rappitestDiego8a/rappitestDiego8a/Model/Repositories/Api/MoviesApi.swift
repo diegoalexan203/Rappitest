@@ -2,14 +2,14 @@
 //  MoviesApi.swift
 //  rappitestDiego8a
 //
-//  Created by Periferia on 31/01/22.
+//  Created by Diego Ochoa on 31/01/22.
 //
 
 import Foundation
 import Moya
 
 public enum MoviesApi {
-    case getMovies ( page: String, key: String)
+    case getMovies(page: String, key: String)
 }
 
 extension MoviesApi: TargetType {
@@ -19,49 +19,34 @@ extension MoviesApi: TargetType {
             return .get
         }
     }
-    
+
     public var sampleData: Data {
         switch self {
         case .getMovies:
-              return Data()
+            return Data()
         }
-        
     }
-    
+
     public var task: Task {
         switch self {
-        case .getMovies(let page, let key):
+        case let .getMovies(page, key):
 
-            return .requestParameters(parameters: [ "page": page, "api_key": key], encoding: URLEncoding.queryString)
+            return .requestParameters(parameters: ["page": page, "api_key": key], encoding: URLEncoding.queryString)
         }
     }
-    
-//    public var headers: [String: String]? {
-//        switch self {
-//        case .getMovies(_, let key):
-////            var headers: [String: String] {
-////                   return ["Authorization": "Bearer \(key)"]
-////            }
-//            var headers : [String : String] = [:]
-//            headers["key"] = key
-//            return headers
-//        }
-//    }
-    
+
     public var headers: [String: String]? {
-       return ["Content-Type": "application/json"]
-     }
+        return ["Content-Type": "application/json"]
+    }
 
     public var baseURL: URL {
         return URL(string: "https://api.themoviedb.org/4")!
     }
-    
-    public var path: String {
-    switch self {
 
-    case .getMovies:
-        return "/list/4"
-        
-    }
+    public var path: String {
+        switch self {
+        case .getMovies:
+            return "/list/1"
+        }
     }
 }
