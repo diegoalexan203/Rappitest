@@ -9,6 +9,19 @@
 /* Begin PBXBuildFile section */
 		5BA031B727C4102700D3F568 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA031B627C4102700D3F568 /* NetworkManager.swift */; };
 		5BA031B827C4102700D3F568 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA031B627C4102700D3F568 /* NetworkManager.swift */; };
+		5BA031BB27C4997D00D3F568 /* FakeMoviesBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA031BA27C4997D00D3F568 /* FakeMoviesBL.swift */; };
+		5BA031BC27C49A1A00D3F568 /* MoviesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B689C427A81C9000BC460D /* MoviesProtocol.swift */; };
+		5BA031BD27C4A38500D3F568 /* ResponseTDMEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B689C627A8200800BC460D /* ResponseTDMEntity.swift */; };
+		5BA031BE27C4A3DD00D3F568 /* MoviesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D61A3A27AB09D200943859 /* MoviesEntity.swift */; };
+		5BA031C027C4A58000D3F568 /* DashBoardViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA031BF27C4A58000D3F568 /* DashBoardViewModelTest.swift */; };
+		5BA031C127C5853B00D3F568 /* DashBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E4239327A8A2160021992D /* DashBoardViewModel.swift */; };
+		5BA031C227C585EB00D3F568 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E4239627A8A24F0021992D /* ViewModelProtocol.swift */; };
+		5BA031C327C585F100D3F568 /* MoviesBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B689C827A820B900BC460D /* MoviesBusinessLogic.swift */; };
+		5BA031C427C585FB00D3F568 /* DbHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12BCC2727C2B29D0057652A /* DbHelper.swift */; };
+		5BA031C527C5861200D3F568 /* MoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B689CD27A8226D00BC460D /* MoviesRepository.swift */; };
+		5BA031C627C5863200D3F568 /* MoviesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B689CB27A821C900BC460D /* MoviesRepositoryProtocol.swift */; };
+		5BA031C727C5864E00D3F568 /* MoviesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B689D227A823D400BC460D /* MoviesApi.swift */; };
+		5BA031C827C5865300D3F568 /* DefaultAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B689CF27A8235100BC460D /* DefaultAlamofireManager.swift */; };
 		6D360086282EDF65BCB26459 /* Pods_rappitestDiego8a.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F931E484B769AB3AF358C1 /* Pods_rappitestDiego8a.framework */; };
 		80F58C9575F67CED3FDC3D5B /* Pods_rappitestDiego8aTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B406A2587166DF90437B4A /* Pods_rappitestDiego8aTests.framework */; };
 		9336AE2227A5B5F300319AA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9336AE2127A5B5F300319AA0 /* AppDelegate.swift */; };
@@ -48,6 +61,8 @@
 /* Begin PBXFileReference section */
 		35F931E484B769AB3AF358C1 /* Pods_rappitestDiego8a.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rappitestDiego8a.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BA031B627C4102700D3F568 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5BA031BA27C4997D00D3F568 /* FakeMoviesBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeMoviesBL.swift; sourceTree = "<group>"; };
+		5BA031BF27C4A58000D3F568 /* DashBoardViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewModelTest.swift; sourceTree = "<group>"; };
 		74E683181E403CA8BC676DC8 /* Pods-rappitestDiego8a.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rappitestDiego8a.release.xcconfig"; path = "Target Support Files/Pods-rappitestDiego8a/Pods-rappitestDiego8a.release.xcconfig"; sourceTree = "<group>"; };
 		9336AE1E27A5B5F300319AA0 /* rappitestDiego8a.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rappitestDiego8a.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9336AE2127A5B5F300319AA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +133,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		5BA031B927C4995E00D3F568 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				5BA031BA27C4997D00D3F568 /* FakeMoviesBL.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
 		9336AE1527A5B5F300319AA0 = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +180,9 @@
 		9336AE3727A5B5F600319AA0 /* rappitestDiego8aTests */ = {
 			isa = PBXGroup;
 			children = (
+				5BA031B927C4995E00D3F568 /* Fakes */,
 				9336AE3827A5B5F600319AA0 /* rappitestDiego8aTests.swift */,
+				5BA031BF27C4A58000D3F568 /* DashBoardViewModelTest.swift */,
 			);
 			path = rappitestDiego8aTests;
 			sourceTree = "<group>";
@@ -337,6 +362,7 @@
 				9336AE3027A5B5F600319AA0 /* Sources */,
 				9336AE3127A5B5F600319AA0 /* Frameworks */,
 				9336AE3227A5B5F600319AA0 /* Resources */,
+				C8D942A4DA3F8EDB07BD9977 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -470,6 +496,23 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		C8D942A4DA3F8EDB07BD9977 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rappitestDiego8aTests/Pods-rappitestDiego8aTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rappitestDiego8aTests/Pods-rappitestDiego8aTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rappitestDiego8aTests/Pods-rappitestDiego8aTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E60361C5A709937A32587464 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -519,8 +562,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BA031BC27C49A1A00D3F568 /* MoviesProtocol.swift in Sources */,
+				5BA031BD27C4A38500D3F568 /* ResponseTDMEntity.swift in Sources */,
 				5BA031B827C4102700D3F568 /* NetworkManager.swift in Sources */,
+				5BA031C027C4A58000D3F568 /* DashBoardViewModelTest.swift in Sources */,
+				5BA031C527C5861200D3F568 /* MoviesRepository.swift in Sources */,
 				9336AE3927A5B5F600319AA0 /* rappitestDiego8aTests.swift in Sources */,
+				5BA031BB27C4997D00D3F568 /* FakeMoviesBL.swift in Sources */,
+				5BA031C727C5864E00D3F568 /* MoviesApi.swift in Sources */,
+				5BA031BE27C4A3DD00D3F568 /* MoviesEntity.swift in Sources */,
+				5BA031C127C5853B00D3F568 /* DashBoardViewModel.swift in Sources */,
+				5BA031C227C585EB00D3F568 /* ViewModelProtocol.swift in Sources */,
+				5BA031C627C5863200D3F568 /* MoviesRepositoryProtocol.swift in Sources */,
+				5BA031C427C585FB00D3F568 /* DbHelper.swift in Sources */,
+				5BA031C827C5865300D3F568 /* DefaultAlamofireManager.swift in Sources */,
+				5BA031C327C585F100D3F568 /* MoviesBusinessLogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

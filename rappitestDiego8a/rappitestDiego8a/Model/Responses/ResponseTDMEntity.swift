@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ResponseTDMEntity: Codable {
+public struct ResponseTDMEntity: Codable {
     let id: Int
     let name: String
     let page: Int
@@ -35,7 +35,7 @@ struct ResponseTDMEntity: Codable {
         self.totalResults = totalResults
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         posterPath = try values.decode(String.self, forKey: .posterPath)
         id = try values.decode(Int.self, forKey: .id)

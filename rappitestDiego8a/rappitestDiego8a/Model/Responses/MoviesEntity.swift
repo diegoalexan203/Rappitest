@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MoviesEntity: Codable {
+public class MoviesEntity: Codable {
     let backdropPath: String?
     let id: Int?
     let originalTitle, overview: String?
@@ -39,7 +39,7 @@ class MoviesEntity: Codable {
         case video
     }
 
-    required init(from decoder: Decoder) throws {
+    required public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         posterPath = try values.decodeIfPresent(String.self, forKey: .posterPath) ?? ""
         backdropPath = try values.decode(String.self, forKey: .backdropPath)
